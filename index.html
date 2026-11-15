@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nathielly Pires Martins</title>
+<meta name="description" content="Nathielly Pires Martins – tropical ecologist, Technical University of Munich.">
+<style>
+/*
+  =====================================================
+  GUIA RÁPIDO DE EDIÇÃO
+  - CORES: mude só as 4 linhas logo abaixo (--texto, --cinza, --link, --linha).
+  - FOTO: já está embutida no arquivo. Para trocar, peça ao Claude ou use src="foto.jpg" e suba uma foto.jpg.
+  - TEXTOS: procure os comentários "EDITAR" ao longo do arquivo.
+  - PUBLICAÇÕES: lista "PUBLICACOES" no final do arquivo.
+  =====================================================
+*/
+:root{
+  --texto:#2f3324;     /* cor do texto principal (verde muito escuro) */
+  --cinza:#737a62;     /* textos secundários (autores, datas) */
+  --link:#5c6e3c;      /* cor dos links e títulos (verde-oliva) */
+  --linha:#dcdfc9;     /* linhas divisórias (oliva claro) */
+  --fundo:#f8f7f1;     /* fundo da página (off-white) */
+  --faixa:#e6e8d5;     /* fundo do topo e rodapé (oliva bem claro) */
+  --destaque:#a0683f;  /* cor de detalhe (terracota) */
+}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--fundo);color:var(--texto);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;overflow-x:clip}
+a{color:var(--link);text-decoration:none}
+a:hover,a:focus-visible{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+h1{font-size:clamp(26px,3.4vw,34px);line-height:1.2;margin:0 0 18px;font-weight:600;text-wrap:balance}
+h2{font-size:22px;line-height:1.25;margin:40px 0 14px;padding-bottom:6px;border-bottom:2px solid var(--linha);font-weight:600;color:var(--link)}
+h3{font-size:17px;margin:22px 0 4px;font-weight:600}
+p{margin:0 0 14px;max-width:72ch}
+
+header{border-bottom:1px solid var(--linha);background:var(--faixa)}
+header .in{max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:6px 26px;align-items:center}
+header .nome{font-weight:600;color:var(--texto);font-size:18px;margin-right:auto}
+header nav{display:flex;flex-wrap:wrap;gap:2px 22px}
+header nav a{color:var(--cinza);padding:10px 0;display:inline-block}
+header nav a[aria-current=page]{color:var(--texto)}
+
+.layout{max-width:1120px;margin:0 auto;padding:36px 20px 60px;display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px;align-items:start}
+aside{position:sticky;top:24px;font-size:15px}
+.avatar{width:150px;height:150px;border-radius:50%;overflow:hidden;background:var(--faixa);border:3px solid var(--linha);display:grid;place-items:center;color:var(--cinza);font-size:40px;font-weight:300;margin-bottom:16px}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+aside .n{font-size:19px;font-weight:600;line-height:1.3;margin:0 0 4px}
+aside .t{color:var(--cinza);margin:0 0 16px}
+aside ul{list-style:none;margin:0;padding:0}
+aside li{padding:5px 0;display:flex;gap:10px;align-items:baseline}
+aside li span{width:16px;flex:none;color:var(--destaque);text-align:center}
+
+.view[hidden]{display:none}
+.entry{display:grid;grid-template-columns:110px minmax(0,1fr);gap:16px;padding:6px 0}
+.entry .d{color:var(--destaque);white-space:nowrap;font-weight:500}
+.pubs{list-style:none;margin:0;padding:0}
+.pubs li{padding:12px 0;border-bottom:1px solid var(--linha)}
+.pubs .ti{font-weight:600}
+.pubs .au,.pubs .ve{color:var(--cinza);font-size:15px}
+.pubs .au b{color:var(--texto);font-weight:600}
+.talks{padding-left:20px;color:var(--cinza);font-size:15px}.talks li{margin:6px 0}
+.filtro{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 6px}
+.filtro button{font:inherit;font-size:14px;min-height:40px;padding:0 14px;border:1px solid var(--linha);background:var(--fundo);color:var(--texto);border-radius:4px;cursor:pointer}
+.filtro button[aria-pressed=true]{border-color:var(--link);background:var(--link);color:#fff}
+footer{border-top:1px solid var(--linha);background:var(--faixa);color:var(--cinza);font-size:14px}
+footer .in{max-width:1120px;margin:0 auto;padding:18px 20px}
+
+@media(max-width:760px){
+  .layout{grid-template-columns:minmax(0,1fr);gap:24px;padding-top:24px}
+  aside{position:static;display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 18px;align-items:center}
+  .avatar{width:96px;height:96px;font-size:28px;margin:0;grid-row:span 2}
+  aside .t{margin:0}
+  aside ul{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:0 18px;margin-top:10px}
+  .entry{grid-template-columns:minmax(0,1fr);gap:0;padding:8px 0}
+}
+</style>
+</head>
+<body>
+
+<header><div class="in">
+  <a class="nome" href="#about">Nathielly Pires Martins</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#grants">Grants</a>
+  </nav>
+</div></header>
+
+<div class="layout">
+
+<!-- ===== BARRA LATERAL (EDITAR: nome, cargo, links) ===== -->
+<aside>
+  <div class="avatar" id="avatar">NM<img src="data:image/jpeg;base64,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" alt="Nathielly Pires Martins" onerror="this.remove()" onload="this.parentNode.firstChild.remove()"></div>
+  <p class="n">Nathielly Pires Martins</p>
+  <p class="t">Below-ground ecologist · Research assistant, TUM</p>
+  <ul>
+    <li><span>⌖</span>Freising, Germany</li>
+    <li><span>⌂</span>Technical University of Munich</li>
+    <li><span>❝</span><a href="https://scholar.google.com/citations?hl=en&user=lYtYMHwAAAAJ">Google Scholar</a></li>
+    <li><span>◉</span><a href="https://orcid.org/0000-0002-2501-747X">ORCID</a></li>
+    <li><span>◈</span><a href="https://www.researchgate.net/profile/Nathielly-Martins">ResearchGate</a></li>
+    <li><span>✉</span>nathielly.martins@tum.de</li>
+  </ul>
+</aside>
+
+<main>
+
+<!-- ===== PÁGINA: ABOUT (EDITAR textos) ===== -->
+<section class="view" id="v-about">
+  <h1>Nathielly Pires Martins – Below-ground Ecologist</h1>
+  <h2 style="margin-top:0">Biography</h2>
+  <p>I am a below-ground ecologist with extensive experience in the Amazon rainforest. I want to understand nutrient cycling and the mechanisms by which plants and microbial communities acquire resources under climate change. My research asks how Amazonian forests acquire and recycle nutrients, especially phosphorus, and what this means for the forest's capacity to keep absorbing carbon as atmospheric CO₂ rises and droughts intensify.</p>
+
+  <h2>Education</h2>
+  <div class="entry"><div class="d">2018 – 2023</div><div><b>PhD in Tropical Forest Science</b>, National Institute of Amazonian Research (INPA), Manaus, Brazil<br><span style="color:var(--cinza)">Thesis: Phosphorus limitation and increase of atmospheric CO₂ concentration: a perspective of nutrient acquisition mechanisms in the Amazon rainforest. Supervisor: Dr. Carlos Alberto Quesada</span></div></div>
+  <div class="entry"><div class="d">2016 – 2018</div><div><b>MSc in Tropical Forest Science</b>, National Institute of Amazonian Research (INPA), Manaus, Brazil<br><span style="color:var(--cinza)">Thesis: Influence of fine root presence and labile carbon availability on litter decomposition in Central Amazon. Supervisor: Dr. Carlos Alberto Quesada</span></div></div>
+  <div class="entry"><div class="d">2011 – 2015</div><div><b>BSc in Forestry</b>, University of the State of Mato Grosso (UNEMAT), Alta Floresta, Brazil<br><span style="color:var(--cinza)">Thesis: Decomposition of leaves, twigs and bark of Eucalyptus urograndis and soil nutrient return. Supervisor: Dr. Monica Elisa Bleich</span></div></div>
+
+  <h2>Research experience</h2>
+  <div class="entry"><div class="d">Dec 2025 –<br>present</div><div><b>Research assistant</b>, Professorship for Land Surface-Atmosphere Interactions, Technical University of Munich, Germany</div></div>
+  <div class="entry"><div class="d">2023 – 2025</div><div><b>Postdoctoral researcher</b> (Alexander von Humboldt Foundation), Professorship for Land Surface-Atmosphere Interactions, Technical University of Munich, Germany</div></div>
+  <div class="entry"><div class="d">2016 – 2023</div><div><b>MSc and PhD research</b>, AmazonFACE programme, Manaus, Brazil<br><span style="color:var(--cinza)">Led the below-ground components of the open-top chamber elevated-CO₂ experiment in the Amazonian understory: root dynamics and traits, phosphatase activity, mycorrhizal colonisation, litter chemistry, soil microbial immobilisation and enzymes, phosphorus fractionation and soil CO₂ efflux. Designed and ran a field litter decomposition experiment.</span></div></div>
+
+  <h2>Publications</h2>
+  <p style="color:var(--cinza)">Highlights from 2026. See all articles on the <a href="#publications">Publications</a> page.</p>
+  <ol class="pubs" id="destaque"></ol>
+</section>
+
+<!-- ===== PÁGINA: RESEARCH (EDITAR textos) ===== -->
+<section class="view" id="v-research" hidden>
+  <h1>Research</h1>
+  <h3>Roots and phosphorus under elevated CO₂</h3>
+  <p>How understory plants shift their phosphorus-acquisition strategies – root growth, exudation, phosphatase activity and mycorrhizae – when CO₂ rises, measured in the AmazonFACE experiment.</p>
+  <h3>Decomposition and nutrient release</h3>
+  <p>The role of fine roots and microbes in breaking down leaf litter and wood, and in releasing nutrients back to plants in phosphorus-poor soils.</p>
+  <h3>Soil nutrient cycling</h3>
+  <p>Organic phosphorus dynamics, microbial carbon, nitrogen and phosphorus, and deep-soil processes that control how much carbon the Amazon can store.</p>
+  <h3>Forests under drought</h3>
+  <p>Responses of canopy greenness, root traits and nutrient losses to droughts and warming, from the Amazon to managed grasslands.</p>
+</section>
+
+<!-- ===== PÁGINA: TEACHING (EDITAR) ===== -->
+<section class="view" id="v-teaching" hidden>
+  <h1>Teaching and supervision</h1>
+  <h2 style="margin-top:0">Teaching</h2>
+  <div class="entry"><div class="d">SS 2026</div><div><b>"Hot topics" in der Pflanzenökologie</b>, Technical University of Munich<br><span style="color:var(--cinza)">Lecture: AmazonFACE – assessing the effects of increased atmospheric CO₂ on the ecology and resilience of the Amazon forest</span></div></div>
+  <div class="entry"><div class="d">SS 2026</div><div><b>Modelling and Statistical Analysis of Large Arrays</b>, Technical University of Munich<br><span style="color:var(--cinza)">Lecture: Introduction to dynamic global vegetation modelling</span></div></div>
+  <div class="entry"><div class="d">WS 2025/26</div><div><b>Climate Change – The Complete Briefing</b>, Technical University of Munich<br><span style="color:var(--cinza)">Lecture: System dynamics and tipping points</span></div></div>
+  <div class="entry"><div class="d">2021</div><div><b>Teaching internship – Environmental Chemistry</b>, Federal Institute of Amazonas (IFAM), Manaus, Brazil<br><span style="color:var(--cinza)">Two semesters, focused on nutrient cycling and climate change</span></div></div>
+  <h2>Supervision</h2>
+  <div class="entry"><div class="d">2026</div><div><b>Isabella Carolina Rolle Hernández</b> – BSc project internship (Erasmus), Technical University of Munich. Supervisor<br><span style="color:var(--cinza)">Microbial stoichiometry and nutrient dynamics</span></div></div>
+  <div class="entry"><div class="d">2023 – 2025</div><div><b>Fernanda Modesto</b> – MSc thesis, PPG-Ecology, INPA, Brazil. Co-supervisor<br><span style="color:var(--cinza)">Seasonal variability in resource acquisition strategies of plant communities in a terra firme forest in Central Amazon</span></div></div>
+</section>
+
+<!-- ===== PÁGINA: GRANTS (EDITAR) ===== -->
+<section class="view" id="v-grants" hidden>
+  <h1>Scholarships and grants</h1>
+  <h2 style="margin-top:0">Fellowships and grants</h2>
+  <div class="entry"><div class="d">2023 – 2025</div><div><b>Alexander von Humboldt Foundation</b> postdoctoral fellowship – Investigating plant and microbial nutrient acquisition mechanisms in response to future climate change projections in the Amazonian rainforest</div></div>
+  <div class="entry"><div class="d">2024</div><div><b>New Phytologist – Next Generation of Scientists</b> – Plasticity of nutrient acquisition mechanisms in the Amazonian understory under elevated atmospheric CO₂</div></div>
+  <div class="entry"><div class="d">2019 – 2023</div><div><b>Brazilian Fund for Biodiversity (FUNBIO)</b> PhD grant – Changes in nutrient acquisition mechanisms in a Central Amazonian forest in response to increased atmospheric CO₂</div></div>
+  <div class="entry"><div class="d">2018 – 2023</div><div><b>PhD scholarship</b>, AmazonFACE programme in cooperation with CAPES</div></div>
+  <div class="entry"><div class="d">2019</div><div><b>European Geosciences Union</b> – Early Career Scientist's Travel Support</div></div>
+</section>
+
+<!-- ===== PÁGINA: PUBLICATIONS (a lista é preenchida pelo código no final) ===== -->
+<section class="view" id="v-publications" hidden>
+  <h1>Publications</h1>
+  <p style="color:var(--cinza)">Full list on <a href="https://scholar.google.com/citations?hl=en&user=lYtYMHwAAAAJ">Google Scholar</a>.</p>
+  <h2>Journal articles</h2>
+  <div class="filtro" role="group" aria-label="Filter">
+    <button type="button" data-f="all" aria-pressed="true">All</button>
+    <button type="button" data-f="first" aria-pressed="false">First author</button>
+  </div>
+  <ol class="pubs" id="pubs"></ol>
+  <h2>Datasets and conference contributions</h2>
+  <ul class="talks" id="talks"></ul>
+</section>
+
+</main>
+</div>
+
+<footer><div class="in">© 2026 Nathielly Pires Martins</div></footer>
+
+<script>
+{
+/* ===== PUBLICACOES (EDITAR) =====
+   Formato: [ano, "título", "autores", "revista, volume, páginas", 1 se primeira autora / 0 se não, "link (DOI) ou vazio"]
+   Para adicionar um artigo: copie uma linha inteira, cole no topo e altere. */
+const PUBLICACOES=[
+[2026,"Amazonian understory forests change phosphorus acquisition strategies under elevated CO₂","NP Martins, L Fuchslueger, LF Lugli, OJ Valverde-Barrantes, RJ Norby, et al.","Nature Communications 17, 3740",1,"https://doi.org/10.1038/s41467-026-72098-0"],
+[2026,"Record decline and slowing down of canopy-greenness in Amazonia during the 2023/2024 drought","A Buras, V Ferreira, NP Martins, FIJ Schnell, A Rammig","Environmental Research Letters 21, 064026",0,"https://doi.org/10.1088/1748-9326/ae4e4b"],
+[2026,"Drought and warming enhance the risk of nitrogen losses in intensively managed grasslands","H Vallicrosa, P Mariotte, F Hagedorn, L Fuchslueger, N Martins, A Milano, et al.","Plant and Soil",0,"https://doi.org/10.1007/s11104-026-08471-1"],
+[2026,"Phosphorus and base cations drive contrasting root dynamics in a central Amazon forest","J Schmeisk-Rosa, KM Andersen, AL Cordeiro, ACM Moraes, et al.","Plant and Soil 520, 957–972",0,"https://doi.org/10.1007/s11104-026-08303-2"],
+[2025,"Rainfall seasonality shapes belowground root trait dynamics in an Amazonian tropical rainforest: a test of the stress-dominance hypothesis","OJ Valverde-Barrantes, LF Lugli, L Fuchslueger, F Hofhansl, N Martins, et al.","Functional Ecology 39, 799–812",0,"https://doi.org/10.1111/1365-2435.14744"],
+[2024,"In situ short-term responses of Amazonian understory plants to elevated CO₂","AR Damasceno, S Garcia, IF Aleixo, JCG Menezes, IS Pereira, et al.","Plant, Cell & Environment 47, 1865–1876",0,"https://doi.org/10.1111/pce.14842"],
+[2024,"Fine root presence and increased phosphorus availability stimulate wood decay in a central Amazonian rainforest","NP Martins, O Valverde-Barrantes, L Fuchslueger, LF Lugli, A Grandis, et al.","Oikos 2024, e09996",1,"https://doi.org/10.1111/oik.09996"],
+[2022,"Changes in leaf functional traits with leaf age: when do leaves decrease their photosynthetic capacity in Amazonian trees?","J Menezes, S Garcia, A Grandis, H Nascimento, TF Domingues, et al.","Tree Physiology 42, 922–938",0,"https://doi.org/10.1093/treephys/tpab042"],
+[2021,"Litter inputs and phosphatase activity affect the temporal variability of organic phosphorus in a tropical forest soil in the Central Amazon","KJ Schaap, L Fuchslueger, MR Hoosbeek, F Hofhansl, NP Martins, et al.","Plant and Soil 469, 423–441",0,"https://doi.org/10.1007/s11104-021-05146-x"],
+[2021,"Fine roots stimulate nutrient release during early stages of leaf litter decomposition in a Central Amazon rainforest","NP Martins, L Fuchslueger, K Fleischer, KM Andersen, RL Assis, et al.","Plant and Soil 469, 287–303",1,"https://doi.org/10.1007/s11104-021-05148-9"],
+[2021,"Rapid responses of root traits and productivity to phosphorus and cation additions in a tropical lowland forest in Amazonia","LF Lugli, JS Rosa, KM Andersen, R Di Ponzio, RV Almeida, M Pires, et al.","New Phytologist 230, 116–128",0,"https://doi.org/10.1111/nph.17154"],
+[2016,"Concentração de nutrientes em Eucalyptus urograndis com sete anos de idade na borda sul da Amazônia","DS Verão, ME Bleich, NP Martins, JM Bassotto, AF Mortat, AFA Santos","Biodiversidade 15, 35–44",0,""]];
+
+/* ===== CONGRESSOS E DADOS (EDITAR) — uma linha por item ===== */
+const CONGRESSOS=[
+"Martins N et al. (2026) Amazon forest's carbon sink strength depends on plant nutrient efficiency at the root-soil interface. EGU General Assembly 2026.",
+"Fuchslueger L, Martins NP et al. (2026) Going deeper underground – unravelling microbial activity and carbon cycling in deep soils in the Central Amazon. EGU 2026.",
+"Fleischer K et al. (2026) Climate controls on canopy turnover in an Amazonian lowland forest. EGU 2026.",
+"Aleixo I et al. (2026) Functional diversity in the first FACE experiment in a hyperdiverse Amazon forest. ATBC Annual Meeting 2026.",
+"Martins N et al. (2025) Effect of elevated CO₂ on late-stage leaf litter decomposition in the Amazonian understory. EGU 2025.",
+"Martins N (2024) Multiple plant root strategies improve phosphorus acquisition under elevated CO₂ in the Amazon rainforest. EGU 2024.",
+"Domingues T et al. (2024) Amazonian understory response to elevated CO₂. EGU 2024.",
+"Martins N et al. (2023) Data from: Fine root presence and increased phosphorus availability stimulate wood decay. Dryad dataset.",
+"Martins N et al. (2022) Initial responses of fine root dynamics of understory plants to elevated CO₂ in a Central Amazon rainforest. EGU 2022.",
+"Miron AC et al. (2022) Asynchronous forest: rainfall seasonality controlling fine-roots and litterfall productivity in Central Amazonia. EGU 2022.",
+"Brum B et al. (2022) Effects of soil fertilization on aboveground biomass in an old-growth forest in Central Amazon. EGU 2022.",
+"Neves GU et al. (2022) Short-term responses of Inga edulis seedlings to elevated CO₂ and phosphorus addition. EGU 2022.",
+"Rammig A et al. (2020) AmazonFACE – assessing the response of Amazon rainforest functioning to elevated CO₂. EGU 2020.",
+"Martins N et al. (2019) Fine roots stimulate direct biochemical nutrient release during early litter decomposition. EGU 2019."];
+
+/* ----- daqui para baixo não precisa mexer ----- */
+const eu=/(NP Martins|N Martins)/g;
+const busca=t=>'https://scholar.google.com/scholar?q='+encodeURIComponent('"'+t+'"');
+const lista=document.getElementById('pubs');
+const mostrar=f=>{lista.innerHTML=PUBLICACOES.filter(p=>f==='all'||p[4]).map(p=>`<li><div class="ti"><a href="${p[5]||busca(p[1])}">${p[1]}</a></div><div class="au">${p[2].replace(eu,'<b>$1</b>')}</div><div class="ve"><i>${p[3]}</i> (${p[0]})</div></li>`).join('')};
+mostrar('all');
+const item=p=>`<li><div class="ti"><a href="${p[5]||busca(p[1])}">${p[1]}</a></div><div class="au">${p[2].replace(eu,'<b>$1</b>')}</div><div class="ve"><i>${p[3]}</i> (${p[0]})</div></li>`;
+document.getElementById('destaque').innerHTML=PUBLICACOES.filter(p=>p[0]===2026).map(item).join('');
+document.getElementById('talks').innerHTML=CONGRESSOS.map(t=>`<li>${t}</li>`).join('');
+document.querySelectorAll('.filtro button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filtro button').forEach(x=>x.setAttribute('aria-pressed',x===b));mostrar(b.dataset.f)}));
+const paginas=['about','research','publications','teaching','grants'];
+const ir=()=>{const h=location.hash.slice(1);const p=paginas.includes(h)?h:'about';
+  paginas.forEach(x=>document.getElementById('v-'+x).hidden=x!==p);
+  document.querySelectorAll('header nav a').forEach(a=>a.toggleAttribute('aria-current',a.getAttribute('href')==='#'+p)&&a.setAttribute('aria-current','page'));
+  if(h)window.scrollTo(0,0)};
+window.addEventListener('hashchange',ir);ir();
+}
+</script>
+</body>
+</html>
